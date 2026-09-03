@@ -1,5 +1,11 @@
 # Cloud Run Operations
 
+Production service:
+
+```text
+https://doab-discovery-mcp-zz7qmtk2oa-ew.a.run.app
+```
+
 The GitHub Actions deployment uses Google Workload Identity Federation. No service-account JSON
 key is stored in GitHub.
 
@@ -70,7 +76,7 @@ even while promotional credits cover the bill.
 ## Verify
 
 ```bash
-curl --fail https://<service-url>/health
+curl --fail https://doab-discovery-mcp-zz7qmtk2oa-ew.a.run.app/health
 ```
 
 The landing page is `/`, privacy is `/privacy`, and the public MCP endpoint is `/mcp`.

@@ -99,7 +99,11 @@ npm ci && npm run build
 
 ### Remote (Streamable HTTP)
 
-Deploy it anywhere that runs a container, then add the deployment's `/mcp` URL:
+No account, API key, or payment required. Add this URL:
+
+```text
+https://doab-discovery-mcp-zz7qmtk2oa-ew.a.run.app/mcp
+```
 
 | Client                                  | Where to add it                                                                      |
 | --------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -107,7 +111,8 @@ Deploy it anywhere that runs a container, then add the deployment's `/mcp` URL:
 | **ChatGPT** (Business, Enterprise, Edu) | Settings → Apps, developer mode enabled, created by an authorized admin or developer |
 | **Codex / other MCP clients**           | Add as a remote Streamable HTTP MCP server                                           |
 
-Set `DEPLOYMENT_BASE_URL` so the connector icon and website URL resolve absolutely.
+Client availability and menu names change. To self-host instead, deploy the container anywhere
+and set `DEPLOYMENT_BASE_URL` so the connector icon and website URL resolve absolutely.
 
 ---
 
@@ -160,3 +165,13 @@ query against the live index, so an index change surfaces as a failing test rath
 results in production.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and the [MIT License](LICENSE).
+
+---
+
+## Deployment
+
+Pushes to `main` are verified by CI and then deployed to Google Cloud Run through keyless Workload
+Identity Federation. See [docs/CLOUD_RUN.md](docs/CLOUD_RUN.md).
+
+- Landing page: https://doab-discovery-mcp-zz7qmtk2oa-ew.a.run.app/
+- Health: https://doab-discovery-mcp-zz7qmtk2oa-ew.a.run.app/health
