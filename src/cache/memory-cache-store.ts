@@ -11,7 +11,7 @@ export interface MemoryCacheOptions {
  * cache cannot run.
  *
  * This matters because query relaxation can issue several upstream requests for a single tool
- * call — the ladder walks from a narrow AND down to a broad OR, and every rung that returns
+ * call, because the ladder walks from a narrow AND down to a broad OR and every rung that returns
  * nothing is still a round trip. Repeated or overlapping queries would otherwise replay all of
  * them against DOAB.
  */

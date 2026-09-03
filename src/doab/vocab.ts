@@ -2,7 +2,7 @@
  * Country and language vocabulary.
  *
  * Unlike DOAJ, DOAB stores language as a NAME ("English", "Turkish"), not an ISO code, so the
- * ISO tables here exist only to normalise user input — "tr", "türkçe" and "Turkish" all have to
+ * ISO tables here exist only to normalise user input: "tr", "türkçe" and "Turkish" all have to
  * resolve to the single spelling DOAB indexes. Country is never a query clause (see
  * UNFILTERABLE_FIELDS in fields.ts); it is kept for ranking and for reading publisher metadata.
  */

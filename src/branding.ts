@@ -14,8 +14,8 @@ export const ICON_PATH = "/icon.svg";
 export const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="t">
   <title id="t">DOAB Discovery MCP</title>
   <rect width="48" height="48" rx="11" fill="${BRAND_TEAL}"/>
-  <path d="M24 15.5c-3.2-2.2-6.6-2.8-10.5-2.6v20c3.9-.2 7.3.4 10.5 2.6 3.2-2.2 6.6-2.8 10.5-2.6v-20c-3.9-.2-7.3.4-10.5 2.6Z" fill="#fff"/>
-  <path d="M24 15.5v20" fill="none" stroke="${BRAND_TEAL}" stroke-width="2.6" stroke-linecap="round"/>
+  <path d="M24 17c-3.6-2.4-7.5-3.1-11.5-2.9v18c4-.2 7.9.5 11.5 2.9 3.6-2.4 7.5-3.1 11.5-2.9v-18c-4-.2-7.9.5-11.5 2.9Z" fill="#fff"/>
+  <path d="M24 17v18" fill="none" stroke="${BRAND_TEAL}" stroke-width="2.4" stroke-linecap="round"/>
 </svg>
 `;
 
@@ -26,6 +26,6 @@ export const ICON_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48
 export const inlineIconMarkup = (size: number): string =>
   `<svg class="mark" width="${size}" height="${size}" viewBox="0 0 48 48" aria-hidden="true" focusable="false">` +
   `<rect width="48" height="48" rx="11" fill="${BRAND_TEAL}"/>` +
-  `<path d="M24 15.5c-3.2-2.2-6.6-2.8-10.5-2.6v20c3.9-.2 7.3.4 10.5 2.6 3.2-2.2 6.6-2.8 10.5-2.6v-20c-3.9-.2-7.3.4-10.5 2.6Z" fill="#fff"/>` +
-  `<path d="M24 15.5v20" fill="none" stroke="${BRAND_TEAL}" stroke-width="2.6" stroke-linecap="round"/>` +
+  `<path d="M24 17c-3.6-2.4-7.5-3.1-11.5-2.9v18c4-.2 7.9.5 11.5 2.9 3.6-2.4 7.5-3.1 11.5-2.9v-18c-4-.2-7.9.5-11.5 2.9Z" fill="#fff"/>` +
+  `<path d="M24 17v18" fill="none" stroke="${BRAND_TEAL}" stroke-width="2.4" stroke-linecap="round"/>` +
   `</svg>`;

@@ -29,8 +29,8 @@ const SERVICE_INSTRUCTIONS = [
     "publisher legitimacy. Every result is a discovery candidate; tell the user to confirm it on " +
     "the DOAB record and the publisher's own page before relying on it.",
   "For topic matching, pass the full abstract or description as free text rather than a few " +
-    "keywords — the tools tokenise, rank and progressively relax the query internally. Books and " +
-    "chapters are separate record types: search_doab_books covers whole books, " +
+    "keywords, since the tools tokenise, rank and progressively relax the query internally. Books " +
+    "and chapters are separate record types: search_doab_books covers whole books, " +
     "search_doab_chapters the individual chapters. DOAB books have no ISSN, so identity lookups " +
     "go through get_doab_record_by_handle or get_doab_record_by_doi.",
   "Pass `language` and `publisher` as names " +

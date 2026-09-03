@@ -21,7 +21,7 @@ So any change that puts a new field into a query must:
 2. add it to the field probe in `tests/live-doab.test.ts`;
 3. pass `DOAB_LIVE_TEST=1 npm test`.
 
-If a field turns out to be present in metadata but not searchable — as `publisher.country` is —
+If a field turns out to be present in metadata but not searchable, as `publisher.country` is,
 it belongs in `UNFILTERABLE_FIELDS`, and the tool that would have used it must warn the caller
 that the value affects ranking only, rather than quietly returning nothing.
 

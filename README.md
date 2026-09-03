@@ -1,8 +1,10 @@
 <div align="center">
 
+<img src="assets/icon.svg" width="72" height="72" alt="">
+
 # DOAB Discovery MCP
 
-**Search the Directory of Open Access Books from any AI client — no account, no API key, no payment**
+**Search the Directory of Open Access Books from any AI client. No account, no API key, no payment**
 
 [![Claude Code compatible](https://img.shields.io/badge/Claude_Code-compatible-D97757?logo=anthropic&logoColor=white)](https://support.anthropic.com/en/articles/11175166-about-custom-integrations-using-remote-mcp)
 [![Node](https://img.shields.io/badge/Node-22%2B-5FA04E?logo=nodedotjs&logoColor=white)](https://nodejs.org)
@@ -31,7 +33,7 @@ just matches zero records. `dc.publisher:Brill` returns nothing while `publisher
 looks right can quietly empty the result set.
 
 Meanwhile, an AI assistant asked "which open-access books cover Syriac manuscript culture?" will
-answer from training data — plausible titles, invented publishers, no verifiable links.
+answer from training data: plausible titles, invented publishers, no verifiable links.
 
 This server closes that gap. It translates plain-language questions and abstracts into valid DOAB
 queries, applies only filters that are verified to work, ranks candidates locally, and returns
@@ -50,16 +52,16 @@ handles and links for verification.
 
 Eight read-only tools. None performs editorial review, quality assessment, or publisher vetting.
 
-| Tool                             | Key inputs                                                                          | What it does                                                                                       |
-| -------------------------------- | ----------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
-| `search_doab_books`              | `query`, `publisher`, `language`, `yearFrom`/`yearTo`, `peerReviewedOnly`, `strict` | Whole-book search with DOAB-side filters and local lexical ranking                                 |
-| `search_doab_chapters`           | `query`, `publisher`, `language`, `yearFrom`/`yearTo`, `strict`                     | Chapter-level search; chapters carry their own DOI and abstract                                    |
-| `recommend_doab_books_for_topic` | `abstract`, `title`, `preferredLanguage`, `includeChapters`                         | Topical book candidates from an abstract or chapter draft                                          |
-| `find_doab_books_by_publisher`   | `publisher`, `query`, `yearFrom`/`yearTo`                                           | A publisher's open-access list, optionally narrowed by topic                                       |
-| `find_similar_doab_books`        | `abstract`, `title`                                                                 | Books similar to a given abstract                                                                  |
-| `get_doab_record_by_doi`         | `doi`                                                                               | Direct lookup by DOI                                                                               |
-| `get_doab_record_by_handle`      | `handle`                                                                            | Direct lookup by handle, DOAB URL, or item UUID                                                    |
-| `explain_doab_metadata`          | `term`                                                                              | Explains handles, chapter records, peer-review fields, Thema, OAPEN — fully local, no network call |
+| Tool                             | Key inputs                                                                          | What it does                                                                                      |
+| -------------------------------- | ----------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `search_doab_books`              | `query`, `publisher`, `language`, `yearFrom`/`yearTo`, `peerReviewedOnly`, `strict` | Whole-book search with DOAB-side filters and local lexical ranking                                |
+| `search_doab_chapters`           | `query`, `publisher`, `language`, `yearFrom`/`yearTo`, `strict`                     | Chapter-level search; chapters carry their own DOI and abstract                                   |
+| `recommend_doab_books_for_topic` | `abstract`, `title`, `preferredLanguage`, `includeChapters`                         | Topical book candidates from an abstract or chapter draft                                         |
+| `find_doab_books_by_publisher`   | `publisher`, `query`, `yearFrom`/`yearTo`                                           | A publisher's open-access list, optionally narrowed by topic                                      |
+| `find_similar_doab_books`        | `abstract`, `title`                                                                 | Books similar to a given abstract                                                                 |
+| `get_doab_record_by_doi`         | `doi`                                                                               | Direct lookup by DOI                                                                              |
+| `get_doab_record_by_handle`      | `handle`                                                                            | Direct lookup by handle, DOAB URL, or item UUID                                                   |
+| `explain_doab_metadata`          | `term`                                                                              | Explains handles, chapter records, peer-review fields, Thema, OAPEN. Fully local, no network call |
 
 Every search response includes the effective DOAB query it ran, the upstream total, and how many
 results were returned, so you can see and audit what was actually asked.

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48" role="img" aria-labelledby="t">
+  <title id="t">DOAB Discovery MCP</title>
+  <rect width="48" height="48" rx="11" fill="#0F7B8A"/>
+  <path d="M24 17c-3.6-2.4-7.5-3.1-11.5-2.9v18c4-.2 7.9.5 11.5 2.9 3.6-2.4 7.5-3.1 11.5-2.9v-18c-4-.2-7.9.5-11.5 2.9Z" fill="#fff"/>
+  <path d="M24 17v18" fill="none" stroke="#0F7B8A" stroke-width="2.4" stroke-linecap="round"/>
+</svg>
