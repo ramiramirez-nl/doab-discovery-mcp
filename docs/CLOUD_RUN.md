@@ -65,13 +65,18 @@ production traffic.
 
 ## Cost Controls
 
-A monthly TRY 500 alerts-only budget covers the whole project, so Cloud Build and Artifact
-Registry costs are included rather than only Cloud Run. Google notifies billing administrators and
-project owners at 50%, 80% and 100%.
+A monthly EUR 9 alerts-only budget covers the whole project, so Cloud Build and Artifact Registry
+costs are included rather than only Cloud Run. Google notifies billing administrators and project
+owners at 50%, 80% and 100%.
 
-Billing reports lag, so small overages remain possible. Add a Cloud Run spend cap in the console
-if hard enforcement is needed; note that a cap uses gross eligible costs and can pause the service
-even while promotional credits cover the bill.
+The amount is denominated in euro because a budget must use its billing account's currency, and
+this account is EUR. EUR 9 is the equivalent of the intended TRY 500 ceiling at roughly 56 TRY to
+the euro; revisit the figure if the rate moves far.
+
+This is an alert, not a cap: it notifies, it does not stop spending. Billing reports also lag, so
+overages remain possible. Add a Cloud Run spend cap in the console if hard enforcement is needed,
+noting that a cap uses gross eligible costs and can pause the service even while promotional
+credits cover the bill.
 
 ## Verify
 
